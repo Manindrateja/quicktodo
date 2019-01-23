@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Add Item</h1>
+<div mat-dialog-content>
+  	<div class="item">
+	    <input matInput placeholder="name" [(ngModel)]="data.name">
+	</div>
+	<div class="item">
+	    <input matInput placeholder="description" [(ngModel)]="data.description">
+	</div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" [disabled]="!data.name || !data.description">Ok</button>
+</div>
